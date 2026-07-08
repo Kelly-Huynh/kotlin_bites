@@ -32,9 +32,38 @@ fun main() {
 
     val listOfThings: List<Any> = listOf(3, "Hello", 4)
     println(findAddress("Kelly"))
+    println(superify(superify(superify(superify("cat")))))
+    var secret = revealSecret("Hi")
+    println(secret)
+    var secret2 = revealSecret("HUNGRY")
+    println(secret2)
+    test(1)
+    println(getNumberSignIf(3))
+    println(getNumberSignIf(0))
+    println(getNumberSignIf(-5))
+    println(getNumberSignIf("not a number"))
+    println(getNumberSignWhen(3))
+    println(getNumberSignWhen(0))
+    println(getNumberSignWhen(-5))
+    println(getNumberSignWhen("not a number"))
+    printHelloMessages(listOf("Jake", "Olga", "Pat"))
+    val numbers2 = listOf(2, -3, 5, 0)
+
+    val signs = getAllNumberSigns(numbers2)
+    println(calculate(2,3, ::add))
+    println(calculate(2,4, ::multiply))
+    println(convertToCaps("kelly"))
+    println(exclaim("Kelly"))
 }
 
 fun findAddress(name: String?): String? {
     return null
 }
+// Functions Intro
+
+// Conditions
+
+// Data Structures
+
+// Functions 2
 
