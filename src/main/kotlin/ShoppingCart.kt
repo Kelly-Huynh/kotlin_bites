@@ -1,14 +1,24 @@
 package org.example
 
-class ShoppingCart{
+class ShoppingCart: Any() {
 
-    val items= ArrayList<Item>()
+    val items = ArrayList<Item>()
 
     fun addItem(newItem: Item) {
         items.add(newItem)
     }
 
-    fun getTotalPrice(price: Double): List<Item> {
-        return items.filter { it.price == price }.toList()
+    fun getTotalPrice(): Double {
+        var totalPrice = 0.0
+
+        if (items.isEmpty()) {
+            return totalPrice
+        }
+
+        items.forEach {
+            totalPrice += it.price
+        }
+
+        return totalPrice
     }
 }

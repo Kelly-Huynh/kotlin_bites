@@ -75,18 +75,19 @@ fun main() {
     println(item.price)
 
     val cart = ShoppingCart()
-    cart.getTotalPrice(item.price)
-    println(cart.getTotalPrice(items.price))
+    cart.getTotalPrice()
+    println(cart.getTotalPrice())
+
     cart.addItem(item)
 
-    cart.getTotalPrice(item.price)
-    println(cart.getTotalPrice(items.price))
+    cart.getTotalPrice()
+    println(cart.getTotalPrice())
 
     cart.addItem(Item("Skittle", 3.99))
     cart.addItem(Item("Skittle", 3.99))
 
-    cart.getTotalPrice(item.price)
-    println(cart.getTotalPrice(items.price))
+    cart.getTotalPrice()
+    println(cart.getTotalPrice())
 }
 
 
