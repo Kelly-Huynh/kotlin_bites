@@ -14,10 +14,13 @@ fun multiply(a: Int, b: Int): Int {
 }
 
 fun convertToCaps(string: String?): String? {
-    return string.toString().uppercase()
+    return string?.uppercase()
 }
 
-fun exclaim(string: String?): String? {
+fun exclaim(string: String?): String {
     return "$string!"
 }
 
+fun greetWith(string: String?, stringConversion: (String?) -> String?): String? {
+    return stringConversion(string)
+}
